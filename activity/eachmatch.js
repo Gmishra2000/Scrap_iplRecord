@@ -5,7 +5,7 @@ let fs = require("fs");
 let path = require("path");
 
 
-function checkExistence(teamName) {
+function fileCreate(teamName) {
     
     return fs.existsSync(teamName);
 }
@@ -77,7 +77,7 @@ function playerReport(playerName,runs,balls,sixes,fours,sr,teamName,venue,date,r
         resultOfmatch
     }
     
-    let dirExist = checkExistence(teamName);
+    let dirExist = fileCreate(teamName);
     if (dirExist) {
 
     } else {
@@ -86,7 +86,7 @@ function playerReport(playerName,runs,balls,sixes,fours,sr,teamName,venue,date,r
     
     let playerFileName = path.join(__dirname, teamName, playerName + ".json");
      
-    let fileExist = checkExistence(playerFileName);
+    let fileExist = fileCreate(playerFileName);
     let playerScore = [];
     if (fileExist) {
         
