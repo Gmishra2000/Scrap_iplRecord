@@ -73,7 +73,9 @@ function playerReport(playerName,runs,balls,sixes,fours,sr,teamName,venue,date,r
         runs: runs,
         balls: balls, sixes,
         fours: fours,
-        sr: sr, teamName,venue,date,
+        sr: sr, teamName,
+        venue,
+        date,
         resultOfmatch
     }
     
